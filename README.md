@@ -1,7 +1,7 @@
 # Intensive CoLearn API Skill
 
 [![Validate](https://github.com/koyo922/intensivecolearn-api-skill/actions/workflows/validate.yml/badge.svg)](https://github.com/koyo922/intensivecolearn-api-skill/actions/workflows/validate.yml)
-[![skills.sh](https://skills.sh/b/koyo922/intensivecolearn-api-skill)](https://skills.sh/koyo922/intensivecolearn-api-skill)
+[![skills.sh](https://skills.sh/b/koyo922/intensivecolearn-api-skill)](https://skills.sh/koyo922/intensivecolearn-api-skill/intensivecolearn-api)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 An unofficial, cross-agent Skill for the [Intensive CoLearn](https://intensivecolearn.ing/) Agent API. It gives compatible agents a safe, documented client for programs, applications, check-ins, events, profiles, collections, tags, and organizer or administrator workflows.
