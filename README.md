@@ -1,7 +1,7 @@
 # Intensive CoLearn API Skill（残酷共学 Agent Skill）
 
 [![Validate](https://github.com/koyo922/intensivecolearn-api-skill/actions/workflows/validate.yml/badge.svg)](https://github.com/koyo922/intensivecolearn-api-skill/actions/workflows/validate.yml)
-[![skills.sh](https://skills.sh/b/koyo922/intensivecolearn-api-skill)](https://skills.sh/koyo922/intensivecolearn-api-skill/intensivecolearn-api)
+[![Install from skills.sh](https://img.shields.io/badge/skills.sh-Install-111111)](https://skills.sh/koyo922/intensivecolearn-api-skill/intensivecolearn-api)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 这是一个非官方、跨 Agent 的 [Intensive CoLearn（残酷共学）](https://intensivecolearn.ing/) API Skill。安装后，Codex、Claude Code、Antigravity、Cursor、GitHub Copilot 等兼容 Agent 可以帮助你查询共学项目、报名、打卡、活动和个人资料，也可以处理发起人及管理员工作流。
