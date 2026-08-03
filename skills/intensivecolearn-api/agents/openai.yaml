@@ -1,0 +1,4 @@
+interface:
+  display_name: "Intensive CoLearn API"
+  short_description: "Use the Intensive CoLearn Agent API with a local Access Key"
+  default_prompt: "Use the Intensive CoLearn API to inspect programs, applications, check-ins, events, profiles, or organizer/admin resources."

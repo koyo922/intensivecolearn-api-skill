@@ -1,0 +1,30 @@
+name: Validate
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  skill:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Compile client
+        run: python -m py_compile skills/intensivecolearn-api/scripts/icl_api.py
+      - name: Verify operation map
+        run: test "$(python skills/intensivecolearn-api/scripts/icl_api.py --list-operations | wc -l | tr -d ' ')" = "28"
+      - name: Verify redacted dry run
+        env:
+          INTENSIVE_COLEARN_APIKEY: test-only-placeholder
+        run: |
+          output="$(python skills/intensivecolearn-api/scripts/icl_api.py get-me --dry-run)"
+          echo "$output" | grep '"Authorization": "<redacted>"'
+          if echo "$output" | grep -q 'test-only-placeholder'; then
+            exit 1
+          fi
