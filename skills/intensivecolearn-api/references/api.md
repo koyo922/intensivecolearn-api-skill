@@ -4,6 +4,14 @@ Source of truth: [official OpenAPI document](https://intensivecolearn.ing/api/v1
 
 The API returns an envelope shaped like `{"apiVersion":"v1","data":...}` for object/list responses. All operations use `Authorization: Bearer <Access Key>`. Mutating operations that declare `Idempotency-Key` require a value matching `^[A-Za-z0-9._:-]+$`, 8-128 characters.
 
+## Public notes outside the Agent API
+
+As verified on 2026-08-04, OpenAPI `1.2.0` has no operation for other learners' notes, selected excellent notes, or note rankings. Do not invent an API endpoint for them.
+
+The public website may expose two excellent-note sections on a program page: daily selections and final selections. It embeds the selected note content in the public page. Programs using `PUBLIC_GITHUB` may also expose their repository, commonly with learner Markdown files under `notes/`.
+
+Use `scripts/icl_public_notes.py` for these sources. It is deliberately separate from `icl_api.py`, requires no ICL Access Key, performs only GET requests, and marks output with `officialAgentApi: false`. Website parsing is best-effort because it is not a versioned API contract. Public GitHub notes are broader than official selections and must not be described as award-winning unless the ICL page selected them.
+
 ## Public and personal resources
 
 | Client operation | HTTP path | Purpose |

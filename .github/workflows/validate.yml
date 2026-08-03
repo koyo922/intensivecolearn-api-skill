@@ -16,7 +16,9 @@ jobs:
         with:
           python-version: "3.11"
       - name: Compile client
-        run: python -m py_compile skills/intensivecolearn-api/scripts/icl_api.py
+        run: python -m py_compile skills/intensivecolearn-api/scripts/icl_api.py skills/intensivecolearn-api/scripts/icl_public_notes.py
+      - name: Test public note parser
+        run: python -m unittest discover -s tests -v
       - name: Verify operation map
         run: test "$(python skills/intensivecolearn-api/scripts/icl_api.py --list-operations | wc -l | tr -d ' ')" = "28"
       - name: Verify redacted dry run
